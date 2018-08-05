@@ -5,15 +5,16 @@
 
   <body class="helvetica">
 
-    {%- include header.html -%}
+    <div class="flex flex-column mw7 center">
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      {%- include header.html -%}
+
+      <div class="mt2 pa2" aria-label="Content">
         {{ content }}
       </div>
-    </main>
-
-    {%- include footer.html -%}
+  
+      {%- include footer.html -%}
+    </div>
 
   </body>
 
