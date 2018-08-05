@@ -1,31 +1,8 @@
-<div class="bg-gray">
-  <div class="wrapper">
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-          </li>
-          {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-  
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-  
-  </div>
-  
+<div class="bg-gray pa2">
+  <ul class="list pl0">
+    <li><a class="link white" href="https://github.com/Tablescript"><svg class="" height="16px" width="16px"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">Tablescript</span></a></li>
+    <li><a class="link white" href="https://twitter.com/tablescript"><svg class="" height="16px" width="16px"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">@tablescript</span></a></li>
+    <li><a class="link white" href="/feed.xml"><svg class="" height="16px" width="16px"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+    <li><a class="link white" href="https://tablescript.slack.com"><img class="" height="16px" width="16px" src="/assets/Slack_Mark_Black_Web.png" /> <span class="">Slack</span></a></li>
+  </ul>
 </div>

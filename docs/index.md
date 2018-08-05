@@ -92,9 +92,3 @@ calculate_bonus = fn (class) {
   }
 }
 ```
-
-### History
-
-I first wrote [Tablescript in C++](https://github.com/jamiehale/tablescript). It was large (~10k lines) and terrible. Then I discovered Ruby and built [Tablescript.rb](https://github.com/jamiehale/tablescript.rb) in 756 lines. It served the purpose, but was just a DSL and scripts needed to conform to Ruby structures.
-
-In 2017, I took a job as a Javascript developer for a world-class front-end web development company. Before then, I wasn't a big fan of Javascript, and more importantly didn't understand it. Now, as I've learned from some of the best, I've come to love the language and ecosystem. Since my intent was always for this to be built into a campaign management tool, I decided to migrate the concept to Javascript. This is the result.
