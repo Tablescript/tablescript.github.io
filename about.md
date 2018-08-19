@@ -18,4 +18,4 @@ I wrote the first version of Tablescript in __C++__ somewhere between 2001 and 2
 
 And then somewhere around 2005 I discovered __Ruby__ and fell in love. With [Tablescript.rb](https://github.com/Tablescript/tablescript.rb), I replaced 10k lines of C++ with 756 lines of Ruby. Tablescript.rb is a simple DSL that overlays the Ruby language, requiring you to write valid Ruby - which isn't so bad because Ruby is lovely. It wouldn't, however, run in a browser.
 
-In 2017 I learned that Javascript wasn't so terrible if you took the time to actually learn it. I'm still learning, but I've managed to scrap together Tablescript.js - a standalone scripting language that is both __browser-embeddable__ and available as a __command-line tool__.
+In 2017 I learned that Javascript wasn't so terrible if you took the time to actually learn it. I'm still learning, but I've managed to scrape together Tablescript.js - a standalone scripting language that is both __browser-embeddable__ and available as a __command-line tool__.

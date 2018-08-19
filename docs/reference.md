@@ -10,72 +10,80 @@ subtitle: Language Reference
 
 String work like most other languages. Single quotes or double quotes, whatever you like. Double-quoted strings use interpolation (see below) and so if performance is a concern, stick to single-quoted strings when possible.
 
-```
+{% capture code %}
 name = 'Joe Schmoe'
 class = "fighter"
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings have lengths:
 
-```
+{% capture code %}
 print(name.length)
 
 >> 10
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings can be indexed (starting with 0):
 
-```
+{% capture code %}
 print(name[0])
 
 >> J
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings can be reverse-indexed (starting with -1):
 
-```
+{% capture code %}
 print(name[-1])
 
 >> e
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings indexed beyond the bounds are undefined:
 
-```
+{% capture code %}
 print(name[100])
 
 >> undefined
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings can be concatenated:
 
-```
+{% capture code %}
 first_name = 'Joe'
 last_name = 'Schmoe'
 print(first_name + ' ' + last_name)
 
 >> Joe Schmoe
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Numbers get converted to strings when adding to strings:
 
-```
+{% capture code %}
 print(99 + ' bottles of ale on the wall')
 
 >> 99 bottles of ale on the wall
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings can be multiplied:
 
-```
+{% capture code %}
 print('sneak attack ' * 3)
 
 >> sneak attack sneak attack sneak attack
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Strings have a variety of build-in methods too:
 
-```
+{% capture code %}
 name = 'Joe Schmoe'
 print(name.split(' '))
 
@@ -110,13 +118,14 @@ print('*' + '   Padded   '.trim() + '*')
 # .trimRight()
 
 >> *Padded*
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 ### String Interpolation
 
 Double-quoted strings are treated as templates and anything inside `#{` and `}` is evaluated as a (mostly) standard expression.
 
-```
+{% capture code %}
 strength = 16
 print("Strength: #{strength}")
 
@@ -139,7 +148,8 @@ print("Treasure: #{treasure()}")
 print("Treasure: #{3d6 * 10}gp and {2d10 * 100}sp")
 
 >> Treasure: 80gp and 1300sp
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Template string expressions cannot include assignments or function or table definitions.
 

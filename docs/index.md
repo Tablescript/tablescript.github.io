@@ -14,12 +14,15 @@ Tablescript has standard types (number, string, boolean, object, array, undefine
 
 A simple script might look like this:
 
-```
-join_and_capitalize = fn(words) { words.map(fn(w) { w.capitalize() }).join(' ') }
+{% capture code %}
+join_and_capitalize = fn(words) {
+  words.map(fn(w) { w.capitalize() }).join(' ')
+}
 print(join_and_capitalize(['green', 'dragon', 'inn']))
 
 >> "Green Dragon Inn"
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 (Tablescript has several built-in functions - `print()` is one of them.)
 
@@ -27,26 +30,28 @@ Tablescript has two types of tables: a `choice` where each entry has the same pr
 
 A simple `choice` table might look like this:
 
-```
+{% capture code %}
 treasure = choice {
   '100gp'
   'magic sword'
   'healing potion'
   'a rock'
 }
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 To use the table, call it like a function:
 
-```
+{% capture code %}
 print(treasure())
 
 >> "magic sword"
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 You can make complex tables by adding scripting elements:
 
-```
+{% capture code %}
 potions = choice {
   'healing'
   'super healing'
@@ -59,31 +64,34 @@ treasure = choice {
   'magic ' + choose(['sword', 'dagger', 'beans'])
   potions() + ' potion'
 }
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Tables (`table`) can also have entries with different probabilities:
 
-```
+{% capture code %}
 wandering_monsters = table {
   1-5: 'goblins'
   6-9: 'orcs'
   10: 'ogre'
 }
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Tablescript has only expressions - no statements. Every expression evaluates to a value. If/else expressions are evaluated the same way math is:
 
-```
+{% capture code %}
 bonus = if (character.class == 'fighter') {
   4
 } else {
   2
 }
-```
+{% endcapture %}
+{% include code.html code=code %}
 
 Functions automatically return the last value - there is no `return` statement:
 
-```
+{% capture code %}
 calculate_bonus = fn (class) {
   if (class == 'fighter') {
     4
@@ -91,4 +99,5 @@ calculate_bonus = fn (class) {
     2
   }
 }
-```
+{% endcapture %}
+{% include code.html code=code %}
