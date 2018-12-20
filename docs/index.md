@@ -60,7 +60,7 @@ potions = choice {
 }
 
 treasure = choice {
-  3d6 * 10 + 'gp'
+  "#{ 3d6 * 10 } gp"
   'magic ' + choose(['sword', 'dagger', 'beans'])
   potions() + ' potion'
 }
