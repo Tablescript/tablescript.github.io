@@ -48,13 +48,13 @@ Tablescript allows you to turn these tables of random _things_ into small script
     <p>... becomes a script like this...</p>
     <pre class="bg-light-gray pa2 f6 w-90">
 wandering_monsters = table {
-  1-3: "#{ d6 } Goblins"
-  4-7: "#{ d3 } Orcs"
-  8-9: "#{ 2d4 } Dire Gerbils"
-  10: 'Ancient Red Dragon'
-}
+  1-3: ${ d6 } Goblins
+  4-7: ${ d3 } Orcs
+  8-9: ${ 2d4 } Dire Gerbils
+  10: Ancient Red Dragon
+};
 
-print(wandering_monsters())
+print(wandering_monsters());
 
 >> 3 Dire Gerbils
 </pre>
