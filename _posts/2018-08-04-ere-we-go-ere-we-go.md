@@ -11,7 +11,7 @@ Well, it's at least partly live. The [documentation](/docs) will grow over time.
 
 Until then, enjoy!
 
-Please report [bugs and feature requests](https://github.com/Tablescript/tablescript.js/issues)! Please [join the Slack](https://tablescript.slack.com)! Please let us know any way you can if you're using Tablescript.js.
+Please report [bugs and feature requests](https://github.com/Tablescript/tablescript.js/issues)! Please [join the Slack](https://tablescript.slack.com)! Please let me know any way you can if you're using Tablescript.js.
 
 Cheers.
 

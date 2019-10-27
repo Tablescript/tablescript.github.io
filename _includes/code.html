@@ -1,1 +1,4 @@
-<div class="pre code bg-light-gray pa2 f6">{{ include.code | strip }}</div>
+<div>
+  <div class="pre code bg-light-gray pa2 f6">{{ include.code | strip }}</div>
+  <a href="/fiddle?script={{ include.code | strip | url_encode }}" target="_new">Try it!</a>
+</div>
