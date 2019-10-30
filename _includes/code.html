@@ -1,4 +1,4 @@
-<div>
-  <div class="pre code bg-light-gray pa2 f6">{{ include.code | strip }}</div>
-  <a href="/fiddle?script={{ include.code | strip | url_encode }}" target="_new">Try it!</a>
+<div class="flex flex-column">
+  <div class="pre code bg-light-gray pa2 mb2 f7 lh-copy">{{ include.code | strip }}</div>
+  <p class="mt0 f6 self-end"><a href="/fiddle?script={{ include.code | strip | url_encode }}" target="_new">Try it!</a></p>
 </div>

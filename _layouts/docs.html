@@ -2,23 +2,78 @@
 layout: page
 ---
 
-<div>
-  <ul class="list pl0">
-    <li><a class="" href="index.html">Introduction</a></li>
-    <li>Getting Started</li>
-    <li>
-      <a class="" href="reference.html">Language Reference</a>
-      <ul class="list pl3">
-        <li>Data Types</li>
-        <li>Tables</li>
-        <li>Control</li>
-        <li>Built-Ins</li>
-      </ul>
-    </li>
-    <li>API</li>
-  </ul>
-</div>
 <div class="">
-  <h2>{{ page.subtitle }}</h2>
-  {{ content }}
+  <div class="fl w-30 outline pa2">
+    <h1 class="f6">Contents</h1>
+    <ul class="list pl0 f6">
+      <li>
+        <a href="index.html">Introduction</a>
+        <ul class="list pl3">
+          <li><a href="index.html#getting-started">Getting Started</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="" href="usage.html">Using Tablescript</a>
+        <ul class="list pl3">
+          <li><a href="usage.html#installation">Installation</a></li>
+          <li><a href="usage.html#usage">Usage</a></li>
+          <li><a href="usage.html#command-line-options">Command Line Options</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="" href="types.html">Types</a>
+        <ul class="list pl3">
+          <li><a href="types.html#string">String</a></li>
+          <li><a href="types.html#number">Number</a></li>
+          <li><a href="types.html#boolean">Boolean</a></li>
+          <li><a href="types.html#array">Array</a></li>
+          <li><a href="types.html#object">Object</a></li>
+          <li><a href="types.html#function">Function</a></li>
+          <li><a href="types.html#table">Table</a></li>
+          <li><a href="types.html#dice-literals">Dice Literals</a></li>
+          <li><a href="types.html#undefined">Undefined</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="" href="language.html">Language</a>
+        <ul class="list pl3">
+            <li>Everything is an Expression</li>
+            <li>Conditionals</li>
+            <li>Loops</li>
+            <li>Operators</li>
+            <li>Comments</li>
+            <li>Variables</li>
+            <li>Functions</li>
+            <li>Scope and Closures</li>
+          </ul>
+      </li>
+      <li>
+        <a class="" href="builtins.html">Built-Ins</a>
+        <ul class="list pl3">
+          <li>Basic</li>
+          <li>Math</li>
+          <li>Gaming</li>
+          <li>Functional Programming</li>
+        </ul>
+      </li>
+      <li>
+        <a class="" href="tables.html">Tables</a>
+        <ul class="list pl3">
+          <li>Patterns</li>
+        </ul>
+      </li>
+      <li>
+        <a class="" href="api.html">API</a>
+        <ul class="list pl3">
+          <li>Using the Engine</li>
+          <li>Customizing</li>
+          <li>Developing</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="fl w-70 pl3">
+    <h1>{{ page.subtitle }}</h1>
+    {{ content }}
+  </div>
 </div>
