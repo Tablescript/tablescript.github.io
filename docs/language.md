@@ -125,6 +125,15 @@ print(x); # >> false
 {% endcapture %}
 {% include code.html code=code %}
 
+The [`range()`](/docs/builtins.html#range) built-in is particularly useful here:
+
+{% capture code %}
+for (i in range(1, 6)) {
+  print(i);
+}; # >> 1, 2, 3, 4, 5
+{% endcapture %}
+{% include code.html code=code %}
+
 #### While Loops
 
 While loops are unbounded and loop until their test condition is `false`.
