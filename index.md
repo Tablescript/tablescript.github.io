@@ -11,10 +11,10 @@ Roleplaying games are filled with tables of random _things_: treasure, monsters,
 
 Tablescript allows you to turn these tables of random _things_ into small scripts that when run produce a random result as if you had rolled on the tables.
 
-<div class="flex flex-row justify-between">
-  <div class="w-50">
+<div class="flex flex-column flex-row-ns justify-between">
+  <div class="w-100 w-50-ns">
     <p>For example, a table like this...</p>
-    <table class="collapse w-90">
+    <table class="collapse w-100 w-90-ns">
       <thead class="bg-light-gray bb">
         <tr>
           <th class="tc f4 pb2" colspan="2">Wandering Monsters</th>
@@ -44,9 +44,9 @@ Tablescript allows you to turn these tables of random _things_ into small script
       </tbody>
     </table>
   </div>
-  <div class="w-50">
+  <div class="w-100 w-50-ns">
     <p>... becomes a script like this...</p>
-    <pre class="bg-light-gray pa2 f6 w-90">
+{% capture code %}
 wandering_monsters = table {
   1-3: ${ d6 } Goblins
   4-7: ${ d3 } Orcs
@@ -54,10 +54,9 @@ wandering_monsters = table {
   10: Ancient Red Dragon
 };
 
-print(wandering_monsters());
-
->> 3 Dire Gerbils
-</pre>
+print(wandering_monsters()); # >> 3 Dire Gerbils
+{% endcapture %}
+{% include code.html code=code %}
   </div>
 </div>
 
