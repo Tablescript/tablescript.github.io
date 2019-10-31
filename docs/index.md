@@ -83,6 +83,38 @@ wandering_monsters = table {
 {% endcapture %}
 {% include code.html code=code %}
 
+Both tables and choices can have arbitrary expressions as entries:
+
+{% capture code %}
+sword_bonus = table {
+  1-10: > 1;
+  11-14: > 2;
+  15-17: > 3;
+  18-19: > 4;
+  20: > 5;
+};
+
+sword_adjectives = choice {
+  > { value: 'holy', order: 1 };
+  > { value: 'vorpal', order: 2 };
+  > { value: 'dancing', order: 3 };
+  > { value: 'luck', order: 4 };
+};
+
+treasure = table {
+  1-99: nothing!
+  100: > {
+    count = d4;
+    adjectives = sword_adjectives.unique(count)
+      .sort(fn(a, b) a.order - b.order)
+      .map(fn(a) a.value)
+      .join(' ');
+    `+${ sword_bonus() } ${ adjectives } blade`;
+  }
+};
+{% endcapture %}
+{% include code.html code=code %}
+
 Tablescript has only expressions - no statements. Every expression evaluates to a value. If/else expressions are evaluated the same way math is:
 
 {% capture code %}
