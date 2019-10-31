@@ -7,13 +7,13 @@ permalink: /news
 {%- if site.posts.size > 0 -%}
 <ul class="list pl0">
   {%- for post in site.posts -%}
-  <li>
-    <span class="">{{ post.date | date: "%B %-d, %Y" }}</span>
-    <h3>
+  <li class="bb pb2 mb3">
+    <h3 class="f3 mb1">
       <a class="link" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
     </h3>
+    <span class="f6 i">{{ post.date | date: "%B %-d, %Y" }}</span>
     {{ post.content }}
   </li>
   {%- endfor -%}

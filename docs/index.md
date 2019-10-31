@@ -2,13 +2,14 @@
 layout: docs
 title: Documentation
 subtitle: Introduction
+section: intro
 ---
 
 Tablescript is a simple scripting language with built-in support for random content generation. The current version allows tables - arrays of elements selected at random when a table is called like a function - and dice literals (e.g. 3d6+5).
 
 The language grew out of a desire to have more random content more readily available when running role-playing games. For instance, it's jarring to the players and the narrative when the characters decide to visit a town that the GM hasn't prepared. With Tablescript (and a random town generation script), a GM can quickly produce enough narrative colour to maintain the illusion that the game world is alive and complete.
 
-## Getting Started
+### Getting Started
 
 Tablescript has standard types (`number`, `string`, `boolean`, `object`, `array`, `undefined`), first class `functions`, and first class `tables`.
 
@@ -19,7 +20,6 @@ join_and_capitalize = fn(words) {
   words.map(fn(w) w.capitalize()).join(' ');
 };
 print(join_and_capitalize(['green', 'dragon', 'inn']));
-
 # >> "Green Dragon Inn"
 {% endcapture %}
 {% include code.html code=code %}
@@ -50,9 +50,7 @@ treasure = choice {
   a rock
 };
 
-print(treasure());
-
-# >> "magic sword"
+print(treasure()); # >> "magic sword"
 {% endcapture %}
 {% include code.html code=code %}
 

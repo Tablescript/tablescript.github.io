@@ -4,7 +4,7 @@ title: About
 permalink: /about
 ---
 
-Tablescript is an idea I had a _looooong_ time ago. It started with questions like these:
+Tablescript is an idea I had a _looooong_ time ago. It started with questions like:
 
 > _"What if I could very quickly create Dungeons &amp; Dragons NPCs?"_
 

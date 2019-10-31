@@ -5,75 +5,103 @@ layout: page
 <div class="w-100">
   <div class="fl-ns w-30-ns outline pa2">
     <h1 class="f6">Contents</h1>
-    <ul class="list pl0 f6">
+    <ul class="list pl0 f5 f6-ns">
       <li>
-        <a href="index.html">Introduction</a>
+        <a class="link" href="index.html">Introduction</a>
+        {% if page.section == "intro" %}
         <ul class="list pl3">
-          <li><a href="index.html#getting-started">Getting Started</a></li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#getting-started">Getting Started</a></li>
         </ul>
       </li>
       <li>
-        <a class="" href="usage.html">Using Tablescript</a>
+        <a class="link" href="usage.html">Using Tablescript</a>
+        {% if page.section == "usage" %}
         <ul class="list pl3">
-          <li><a href="usage.html#installation">Installation</a></li>
-          <li><a href="usage.html#usage">Usage</a></li>
-          <li><a href="usage.html#command-line-options">Command Line Options</a></li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#installation">Installation</a></li>
+          <li><a class="link" href="#usage">Usage</a></li>
+          <li><a class="link" href="#command-line-options">Command Line Options</a></li>
         </ul>
       </li>
       <li>
-        <a class="" href="types.html">Types</a>
+        <a class="link" href="types.html">Types</a>
+        {% if page.section == "types" %}
         <ul class="list pl3">
-          <li><a href="types.html#string">String</a></li>
-          <li><a href="types.html#number">Number</a></li>
-          <li><a href="types.html#boolean">Boolean</a></li>
-          <li><a href="types.html#array">Array</a></li>
-          <li><a href="types.html#object">Object</a></li>
-          <li><a href="types.html#function">Function</a></li>
-          <li><a href="types.html#table">Table</a></li>
-          <li><a href="types.html#dice-literals">Dice Literals</a></li>
-          <li><a href="types.html#undefined">Undefined</a></li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#string">String</a></li>
+          <li><a class="link" href="#number">Number</a></li>
+          <li><a class="link" href="#boolean">Boolean</a></li>
+          <li><a class="link" href="#array">Array</a></li>
+          <li><a class="link" href="#object">Object</a></li>
+          <li><a class="link" href="#function">Function</a></li>
+          <li><a class="link" href="#table">Table</a></li>
+          <li><a class="link" href="#dice-literals">Dice Literals</a></li>
+          <li><a class="link" href="#undefined">Undefined</a></li>
         </ul>
       </li>
       <li>
-        <a class="" href="language.html">Language</a>
+        <a class="link" href="language.html">Language</a>
+        {% if page.section == "language" %}
         <ul class="list pl3">
-            <li>Everything is an Expression</li>
-            <li>Conditionals</li>
-            <li>Loops</li>
-            <li>Operators</li>
-            <li>Comments</li>
-            <li>Variables</li>
-            <li>Functions</li>
-            <li>Scope and Closures</li>
-          </ul>
-      </li>
-      <li>
-        <a class="" href="builtins.html">Built-Ins</a>
-        <ul class="list pl3">
-          <li>Basic</li>
-          <li>Math</li>
-          <li>Gaming</li>
-          <li>Functional Programming</li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#everything-is-an-expression">Everything is an Expression</a></li>
+          <li><a class="link" href="#conditionals">Conditionals</a></li>
+          <li><a class="link" href="#loops">Loops</a></li>
+          <li><a class="link" href="#operators">Operators</a></li>
+          <li><a class="link" href="#comments">Comments</a></li>
+          <li><a class="link" href="#variables">Variables</a></li>
+          <li><a class="link" href="#functions">Functions</a></li>
+          <li><a class="link" href="#scope-and-closures">Scope and Closures</a></li>
         </ul>
       </li>
       <li>
-        <a class="" href="tables.html">Tables</a>
+        <a class="link" href="builtins.html">Built-Ins</a>
+        {% if page.section == "builtins" %}
         <ul class="list pl3">
-          <li>Patterns</li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#basic">Basic</a></li>
+          <li><a class="link" href="#math">Math</a></li>
+          <li><a class="link" href="#gaming">Gaming</a></li>
+          <li><a class="link" href="#functional-programming">Functional Programming</a></li>
         </ul>
       </li>
       <li>
-        <a class="" href="api.html">API</a>
+        <a class="link" href="tables.html">Tables</a>
+        {% if page.section == "tables" %}
         <ul class="list pl3">
-          <li>Using the Engine</li>
-          <li>Customizing</li>
-          <li>Developing</li>
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#patterns">Patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="link" href="api.html">API</a>
+        {% if page.section == "api" %}
+        <ul class="list pl3">
+        {% else %}
+        <ul class="list pl3 dn db-ns">
+        {% endif %}
+          <li><a class="link" href="#using-the-engine">Using the Engine</a></li>
+          <li><a class="link" href="#customizing">Customizing</a></li>
+          <li><a class="link" href="#developing">Developing</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <div class="fl-ns w-70-ns pl3-ns">
-    <h1>{{ page.subtitle }}</h1>
+    <h2 class="mt0-ns">{{ page.subtitle }}</h2>
     {{ content }}
   </div>
 </div>

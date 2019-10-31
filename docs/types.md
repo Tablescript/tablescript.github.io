@@ -2,11 +2,12 @@
 layout: docs
 title: Documentation
 subtitle: Types
+section: types
 ---
 
 Tablescript has standard JavaScript-y types including strings, numbers, booleans, and functions. It also has built-in support for table types and dice literals for content generation.
 
-## String
+### String
 
 Tablescript supports `'single-quoted strings'` and `"double-quoted strings"`. These work like they do in JavaScript and support escaping characters if necessary.
 
@@ -18,7 +19,7 @@ print("I can't believe it's not JavaScript!");
 {% endcapture %}
 {% include code.html code=code %}
 
-### Template Strings
+#### Template Strings
 
 Tablescript also supports `` `back-tick template strings` `` for interpolation. Inside a template string, inject arbitrary Tablescript expressions using `${ ... }`.
 
@@ -28,7 +29,7 @@ print(`A ${ choose(['red', 'green', 'blue', 'purple']) } dragon!`);
 {% endcapture %}
 {% include code.html code=code %}
 
-### Operations
+#### Operations
 
 Strings can be indexed (starting with 0):
 
@@ -79,7 +80,7 @@ print('sneak attack ' * 3); # >> sneak attack sneak attack sneak attack
 {% endcapture %}
 {% include code.html code=code %}
 
-## Number
+### Number
 
 Tablescript supports Javascript-y numbers like integers and floats.
 
@@ -102,7 +103,7 @@ numberethized = int(a_number);
 
 Tablescript does not support scientific or engineering notation. If you need those types of numbers, Tablescript might not be the right tool for the job.
 
-## Boolean
+### Boolean
 
 Tablescript supports boolean values: either `true` or `false`.
 
@@ -116,11 +117,11 @@ assert(d == false);
 {% endcapture %}
 {% include code.html code=code %}
 
-## Array
+### Array
 
 Tablescript supports arrays of values and a variety of operations on those arrays.
 
-### Methods
+#### Methods
 
 Arrays have built-in methods for manipulating them. Call array methods like this:
 
@@ -131,7 +132,7 @@ print(a.reverse()); # >> [3, 19, 7, 2, 4]
 {% endcapture %}
 {% include code.html code=code %}
 
-#### append(i)
+##### append(i)
 
 Returns a new array with `i` appended to the end of the old array.
 
@@ -141,7 +142,7 @@ print(a.append(6)); # >> [1, 2, 3, 4, 5, 6]
 {% endcapture %}
 {% include code.html code=code %}
 
-#### choose()
+##### choose()
 
 Returns a randomly selected entry from the array.
 
@@ -151,7 +152,7 @@ print(a.choose()); # >> blue
 {% endcapture %}
 {% include code.html code=code %}
 
-#### countBy(f)
+##### countBy(f)
 
 Returns an object where the keys are the result of calling `f(entry)` for each array entry, and the values are the count of the number of array entries that return the same key.
 
@@ -162,7 +163,7 @@ print(a.countBy(f)); # >> { 'odd': 4, 'even': 3 }
 {% endcapture %}
 {% include code.html code=code %}
 
-#### each(f)
+##### each(f)
 
 Calls `f(entry)` for each array entry, and returns the value of the last call.
 
@@ -174,7 +175,7 @@ print(v);       # >> 7
 {% endcapture %}
 {% include code.html code=code %}
 
-#### every(f)
+##### every(f)
 
 Returns `true` if for every array entry, `f(entry)` returns true.
 
@@ -187,7 +188,7 @@ print(a.every(is_less_than_10));  # >> false
 {% endcapture %}
 {% include code.html code=code %}
 
-#### some(f)
+##### some(f)
 
 Returns `true` if for at least 1 array entry, `f(entry)` returns true.
 
@@ -200,27 +201,27 @@ print(a.some(is_odd));      # >> false
 {% endcapture %}
 {% include code.html code=code %}
 
-#### filter
-#### includes
-#### indexOf
-#### find
-#### findIndex
-#### length
-#### join
-#### map
-#### reduce
-#### reverse
-#### slice
-#### sort
-#### unique
+##### filter
+##### includes
+##### indexOf
+##### find
+##### findIndex
+##### length
+##### join
+##### map
+##### reduce
+##### reverse
+##### slice
+##### sort
+##### unique
 
-## Object
+### Object
 
-## Function
+### Function
 
-## Table
+### Table
 
-## Dice Literals
+### Dice Literals
 
 Tablescript supports dice literals in mathematical expressions. For example:
 
@@ -264,7 +265,7 @@ Other examples include:
 
 Roll20-style formats are largely supported. For more details, see [the Roll20 documentation](https://wiki.roll20.net/Dice_Reference#Roll20_Dice_Specification).
 
-## Undefined
+### Undefined
 
 Uninitialized variables are `undefined`.
 
