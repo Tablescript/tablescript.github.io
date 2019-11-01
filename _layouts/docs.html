@@ -87,6 +87,16 @@ layout: page
         </ul>
       </li>
       <li>
+        <a class="link" href="debugging.html">Debugging</a>
+          {% if page.section == "debugging" %}
+          <ul class="list pl3">
+          {% else %}
+          <ul class="list pl3 dn db-ns">
+          {% endif %}
+            <li><a class="link" href="#common-problems">Common Problems</a></li>
+          </ul>
+        </li>
+      <li>
         <a class="link" href="api.html">API</a>
         {% if page.section == "api" %}
         <ul class="list pl3">
